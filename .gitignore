@@ -1,0 +1,4 @@
+/appConfig
+/appData
+.env
+docker-compose.override.yml

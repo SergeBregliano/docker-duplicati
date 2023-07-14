@@ -1,0 +1,19 @@
+version: '3.6'
+
+services:
+  duplicati:
+    volumes:
+      - sshfs-vol1:/source/vol1:ro
+      - sshfs-vol2:/source/vol2:ro
+
+volumes:
+  sshfs-vol1:
+    driver: vieux/sshfs:latest
+    driver_opts:
+      sshcmd: "user@domain.ext:/path/to/connect"
+      allow_other: ""
+  sshfs-vol2:
+    driver: vieux/sshfs:latest
+    driver_opts:
+      sshcmd: "user@otherdomain.ext:/path/to/connect"
+      allow_other: ""
