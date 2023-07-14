@@ -6,6 +6,8 @@ services:
     restart: unless-stopped
     container_name: duplicati
     environment:
+      - PUID=0
+      - PGID=0
       - TZ=Europe/Paris
     volumes:
       - ${CONF_PATH}:/config
