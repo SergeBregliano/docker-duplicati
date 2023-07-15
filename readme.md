@@ -35,13 +35,7 @@ SSHKEYS_PATH=/Users/user/.ssh/
 
 ##### Fixez la version du container
 
-Par défaut, la version du container n'est pas fixée afin de tester les versions qui vous intéressent.
-
-```shell
-DUPLICATI_VERSION=latest
-```
-
-N'hésitez pas à fixer la version en production.
+Par défaut, la version du container n'est pas fixée afin de tester les versions qui vous intéressent. N'hésitez pas à fixer la version en production.
 
 ```shell
 DUPLICATI_VERSION=2.0.7
