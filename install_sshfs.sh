@@ -10,7 +10,7 @@ else
     . ./.env
 fi
 
-docker plugin install vieux/sshfs sshkey.source=$SSHKEYS_PATH
+sudo docker plugin install vieux/sshfs sshkey.source=$SSHKEYS_PATH
 
 #to remove the plugin :
 #docker plugin rm vieux/sshfs
