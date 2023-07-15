@@ -98,6 +98,8 @@ Les sauvegardes sont persistées dans le dossier ``/appData``. Là aussi, le dos
 
 #### Gestion des volumes dans Duplicati
 
-- **Les sauvegardes**, en utilisation locale, sont à déposer dans le dossier ``Computer > Backups`` qui correspond au dossier local ``appData/backups`` dans Docker.
+- **Les sauvegardes**, en utilisation locale, sont à déposer dans le dossier ``Computer > Backups`` qui correspond au dossier local ``appData/backups`` dans Docker. 
+  **Attention :** Chaque nouvelle sauvegarde est à placer dans un sous-dossier. 
+  Exemple : ``appData/backups/backup_1``
 
 - **Les volumes distants** sont montés dans Duplicati sous l'arborescence ``Computer > source``.
