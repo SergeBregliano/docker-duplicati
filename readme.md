@@ -65,7 +65,22 @@ Personnalisez ensuite les entrées pour chaque volume souhaité.
   => Cela sera notamment nécessaire en cas de restauration à partir de Duplicati.
 - les différents volumes sont montés par défaut dans /source/nomDuVolume sur le service duplicati.
 
+#### Configuration des alertes e-mail
 
+Afin d'envoyer un e-mail en cas d'erreur lors d'une sauvegarde, se rendre dans ``Paramètres > Options par défaut``, cliquer sur ``Éditer en tant que texte``, personnaliser puis coller les éléments suivants :
+
+```shell
+--send-mail-url=smtp://smtp.gmail.com:587/?starttls=when-available
+--send-mail-any-operation=true
+--send-mail-level=Warning,Error,Fatal
+--send-mail-subject=Duplicati %PARSEDRESULT%, %OPERATIONNAME% report for %backup-name%
+--send-mail-to=destination_email_address@whatever.com
+--send-mail-username=your_sending_gmail_username@gmail.com
+--send-mail-password=your_sending_gmail_password
+--send-mail-from=This_computers_name backup <your_sending_gmail_username@gmail.com>
+```
+
+*Source : https://forum.duplicati.com/t/how-to-configure-automatic-email-notifications-via-gmail-for-every-backup-job/869*
 
 ## Fonctionnement
 
