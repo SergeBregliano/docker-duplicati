@@ -55,6 +55,14 @@ La clef publique de l'utilisateur employé pour réaliser les sauvegardes doit �
 
 **Attention** : en cas d'erreur de clef, il faudra supprimer le volume précédemment créé avant de relancer Duplicati.
 
+Erreur de clef typique :
+
+```shell
+VolumeDriver.Mount: sshfs command execute failed: exit status 1 (read: Connection reset by peer)
+```
+
+Commande de suppression du volume configuré ``sshfs-vol1`` :
+
 ```shell
 docker volume rm duplicati_sshfs-vol1
 ```
