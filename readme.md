@@ -49,6 +49,16 @@ Lancer la commande suivante pour installer le plugin Docker vieux/sshfs :
 $ sh ./install_sshfs.sh
 ```
 
+#### Installation des clefs sur le serveur distant
+
+La clef publique de l'utilisateur employé pour réaliser les sauvegardes doit être présente dans le dossier ``/home/utilisateurDeSauvegarde/.ssh`` où utilisateurDeSauvegarde est le nom de l'utilisateur employé pour réaliser la sauvegarde.
+
+**Attention** : en cas d'erreur de clef, il faudra supprimer le volume précédemment créé avant de relancer Duplicati.
+
+```shell
+docker volume rm duplicati_sshfs-vol1
+```
+
 #### Personnalisez vos volumes distants
 
 L'installation de base fonctionne sans volumes distants. Afin d'ajouter la gestion des volumes distants, il faut dupliquez le fichier ```docker-compose.override-sample.yml``` en ```docker-compose.override.yml```.
