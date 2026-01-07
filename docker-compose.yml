@@ -1,5 +1,3 @@
-version: '3.6'
-
 services:
   duplicati:
     image: lscr.io/linuxserver/duplicati:${DUPLICATI_VERSION}
